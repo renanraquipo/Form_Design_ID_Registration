@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student ID Registration Form</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body class="min-h-screen">
+    <div class="container">
+        <header class="header">
+            <h1 id="title">Student ID Registration Form</h1>
+        </header>
+
+        <form id="student-id-registration-form" action="connect.php" method="post">
+
+            <div class="form-group">
+                <label id="studentId-label" for="studentId">Student ID Number</label>
+                <input type="number" name="studentId" id="studentId" placeholder="ex. 000000000" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label id="lastName-label" for="name">Student Name</label>
+                <input type="text" name="lastName" id="lastName" class="form-control name" placeholder="Last Name" required>
+                <label id="firstName-label" for="name" style="display: inline-block;"></label>
+                <input type="text" name="firstName" id="fistName" class="form-control name" placeholder="First Name" required>
+                <label id="middleName-label" for="name" style="display: inline-block;"></label>
+                <input type="text" name="middleName" id="middleName" class="form-control name" placeholder="Middle Name" required>
+            </div>
+
+            <div class="form-group">
+                <label id="birthDate-label" for="birthDate">Date of Birth</label>
+                <input type="date" name="birthDate" id="birthdate" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+                <label id="college-label" for="college" >College</label>
+                <select name="college" id="college" onchange="programDropdown(this.options[this.selectedIndex].value)">
+                    <option>Select a college</option>
+                    <option value="College of Criminal Justice Education">College of Criminal Justice Education</option>
+                    <option value="College of Information Technology and Computer Science">College of Information Technology and Computer Science</option>
+                    <option value="College of Teacher Education">College of Teacher Education</option>
+                    <option value="College of Accountancy">College of Accountancy</option>
+                    <option value="College of Arts and Sciences">College of Arts and Sciences</option>
+                    <option value="College of Business Administration">College of Business Administration</option>
+                    <option value="College of Engineering and Architecture">College of Engineering and Architecture</option>
+                    <option value="College of Hospitality and Management">College of Hospitality and Management</option>
+                    <option value="College of Nursing">College of Nursing</option>
+                    <option value="College of Law">College of Law</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <select name="program" id="program">
+                     <option>Select a program</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>Address</p>
+                <textarea name="address" id="address" class="input-textarea" placeholder="Enter your Address" rows="5" column="50" style="width: 709px; height: 67px;"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label id="contactPerson-label" for="contactPerson">Parent's or Guardian's Name (To contact in case of Emergency)</label>
+                <input type="text" name="contactPerson" id="contactPerson" placeholder="Parent's or Guardian's name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label id="contactPersonNumber-label" for="contactPersonNumber">Parent's or Guardian's Contact Number</label>
+                <input type="text" name="contactPersonNumber" id="contactPersonNumber" placeholder="Parent's or Guardian's Contact Number" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
